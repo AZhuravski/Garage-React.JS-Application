@@ -1,0 +1,285 @@
+/* Main SCSS table for Garage application */
+
+/* Browsers Default CSS Reset */
+@import "/reset.scss";
+
+/* normalize.css v3.0.2 | MIT License | git.io/normalize */
+@import "/normalize.scss";
+
+/* CSS file for Griddle component */
+@import "/griddle.scss";
+
+    html{
+        background-color:#fff;
+        font:14px normal Tahoma, Arial, Verdana, sans-serif;
+    }
+    body{
+        background-color:#fff;
+    }
+    input{
+        background-color:#F8EEEA;
+        color: #BA512F;
+        height: 25px;
+        border-width: 0px;
+        outline: none;
+    /*    background-image: url();   */
+        background-repeat: no-repeat;  
+        background-position: 4px;  
+        padding-left: 20px;
+    }
+
+/**********************************************************************************/
+/* CSS-rules by default for usual screens and browser without CSS @media support  */
+
+    #layout { 
+        width: 970px; 
+        margin: 0 auto; 
+        background-color:#fff;
+    }
+    #content {
+        width: 65%;
+        float: right;
+        background-color:#fff;
+    }
+    #sidebar {
+        width: 27%;
+        float: left;
+        background-color:#fff;
+        padding-top: 50px;
+        padding-left: 30px;
+    }
+    .row-custom-pager{
+        width: 40%;
+        position: absolute;
+        top:112px;
+    }
+    .row-custom-pager-gap{
+        font-size: 130%;
+        text-align: right;
+        width: 3%;
+    }
+    .row-custom-pager-nav{
+        display: inline;
+        position: relative;
+        top: -38px;
+        left: 240px;
+    }
+    .row-card{
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        margin-bottom: 5px;
+        background-color:#eee;
+    }
+    .row-id{
+        display: inline;
+    }
+    .row-level{
+        display: inline;
+        float: right;
+    }
+    .row-type{
+        display: inline;
+    }
+    .row-slot{
+        display: inline;
+        float: right;
+    }
+    .header-bg {
+        display: block;
+        background-color:#000;
+        height: 20px; 
+        margin-top: 15px;
+    }
+    .apptitle{  
+        border-bottom-color: #ccc; 
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        padding: 16px 30px;
+        font-size: 200%;
+        color: #444;
+    }
+    .h3-menu{
+        margin-top: 15px;
+    }
+    .ul-menu{
+        color: #BA512F;
+        margin-left: 4%;
+        margin-bottom: 15px;
+        margin-top: 5px;
+        list-style-type: none;
+        width: 30%;
+    }
+    .li-menu-level{
+        cursor: pointer;
+    }
+    .li-menu-level:before {
+        font-size: 20px;
+        content: "●";
+        padding-right: 4px;
+    }
+    .li-menu-level-selected{
+        @extend .li-menu;
+        font-weight: bold;
+        color: #70311C;
+    }
+    .li-menu-level-selected:before{
+        font-size: 20px;
+        content: "●";
+        padding-right: 4px;
+    }
+    .li-menu-type{
+        @extend .li-menu-level;
+    }
+    .li-menu-type:before{
+        @extend .li-menu-level:before;
+    }
+    .li-menu-type-selected{
+        @extend .li-menu-level-selected;
+    }
+    .li-menu-type-selected:before{
+        @extend .li-menu-level-selected:before;
+    }
+    .enabled{
+        color: #0099FF;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+    .disabled{
+        color: #dedede;
+        margin-right: 15px;
+    }
+
+    .total{
+        font-size: 370%;
+        color: #bbb;
+    }
+    .total-slash{
+        font-size: 370%;
+        color: #222;
+        padding-left: 25px;
+    }
+    .total-vehicles{
+        font-size: 130%;
+        vertical-align: top;
+        position: relative;
+        top: 11px;
+    }
+
+/**********************************************************************************/
+/* CSS for mobile phones  */
+
+@media screen and (max-width: 767px) {
+    #layout { 
+        width: 95%; 
+    }
+    #content {
+        width: 98%;
+        margin: 0 auto;
+        float: none;
+    }
+    #sidebar {
+        width: 98%;
+        margin: 0 auto;
+        float: none;
+        padding-top: 50px;
+    }
+    .griddle .griddle-filter{
+        right: -21px;
+        top: -366px;
+    }
+    .ul-menu{
+        margin-left: 1%;
+        width: 25%;
+    }
+    .row-custom-pager{
+        top:432px;
+    }
+    .row-custom-pager-gap{
+        width: 20px;
+    }
+    .row-custom-pager-nav{
+        left: 220px;
+    }
+    .row-card{
+        width: 90%;
+    }
+}
+
+/**********************************************************************************/
+/* CSS for tablets  */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #layout { 
+        width: 750px; 
+    }
+    #sidebar {
+        width: 25%;
+        padding-top: 50px;
+    }
+    .griddle .griddle-filter{
+        right: 235px;
+        top: -45px;
+    }
+    .row-custom-pager{
+        top:111px;
+    }
+    .row-custom-pager-gap{
+        width: 20px;
+    }
+    .row-custom-pager-nav{
+        left: 220px;
+    }
+    .row-card{
+        width: 90%;
+    }
+    .ul-menu{
+        color: #BA512F;
+        margin-left: 4%;
+        margin-bottom: 15px;
+        margin-top: 5px;
+        list-style-type: none;
+        width: 40%;
+    }
+}
+
+/**********************************************************************************/
+/* CSS for wide screens  */
+
+@media screen and (min-width: 1200px) {
+    #layout { 
+        width: 1170px;
+        background-color:#fff;
+    }
+    #sidebar {
+        width: 25%;
+        padding-top: 50px;
+    }
+    .griddle .griddle-filter{
+        right: 380px;
+        top: -45px;
+    }
+    .row-custom-pager{
+        top:111px;
+    }
+    .row-custom-pager-gap{
+        width: 20px;
+    }
+    .row-custom-pager-nav{
+        left: 220px;
+    }
+    .row-card{
+        width: 90%;
+    }
+    .ul-menu{
+        width: 40%;
+    }
+}
+
+/**********************************************************************************/
+
+
+
+
